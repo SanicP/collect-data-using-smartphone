@@ -39,6 +39,7 @@
       document.querySelector('#myNavigator').pushPage('page2.html', {data: {title: 'Page 2'}});
     };
   } else if (page.id === 'page2') {
+    navigator.geolocation.getCurrentPosition(showPosition);
     page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
   }
 });
